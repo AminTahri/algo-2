@@ -1,0 +1,23 @@
+ALGORITHM sum_of_all_distinct_elements
+VAR
+    arr1[]={3,1,7,7}
+    arr2[]={2,4,1,9,3}
+    arr1,arr2: ARRAY_OF_INTEGER [10];
+    i,j,elem1,elem2 : INTEGER
+    s : INTEGER :=0;
+BEGIN
+   FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+   FOR j FROM 0 TO arr2.length-1 STEP 1  DO
+  IF(arr1[i]<>arr2[j]) THEN
+  elem1:=arr1[i];
+  elem2:=arr2[j];
+  ELSE
+elem1:=0;
+elem2:=0;
+   BREAK;
+   END_IF
+   s:=s+elem1+elem2
+   END_FOR
+   END_FOR
+
+   read("la sommes des élements est:", sum)
